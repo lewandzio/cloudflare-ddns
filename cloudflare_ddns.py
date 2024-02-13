@@ -46,7 +46,7 @@ def main():
 
     # Read config file
     with open(CONFIG_FILE, 'r') as f:
-        config = yaml.load(f)
+        config = yaml.safe_load(f)
 
     cf_key = config.get('cf_key')
     cf_email = config.get('cf_email')
